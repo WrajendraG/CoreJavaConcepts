@@ -42,3 +42,17 @@ public class HashSetDemo {
 	}
 
 }
+
+/*[null, Nyemar, Suarez, Messi]
+
+Actual way of printing array:
+null
+Nyemar
+Suarez
+Messi
+Size : 4
+Contains : true
+Remove :true
+[Nyemar, Suarez, Messi]
+[]
+*/

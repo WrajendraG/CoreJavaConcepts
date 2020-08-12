@@ -9,7 +9,9 @@ public class GenericsAndNonGenerics
 	{
 		//Non generic
 
-		ArrayList l1=new ArrayList();
+		ArrayList l1=new ArrayList(); 
+		// always use generic concept because we are dealing with warraper class
+		// at the time of converting warrper to premmative(call unboxing) erroer occer in this secution
 		l1.add("abc");
 		l1.add(102);
 		l1.add("PQR");
@@ -38,3 +40,7 @@ public class GenericsAndNonGenerics
 	}
 
 }
+/*
+Non generics [abc, 102, PQR, 102, 104]
+Generics  [abc, xyz, PQR, efg]
+Generics [234, 121, 313, 587]*/

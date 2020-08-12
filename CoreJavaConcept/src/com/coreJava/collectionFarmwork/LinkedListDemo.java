@@ -7,7 +7,7 @@ public class LinkedListDemo
 {
 	public static void main(String[] args) 
 	{
-		LinkedList<String> l = new LinkedList<String>();
+		LinkedList<String> l = new LinkedList<>();
 		System.out.print("\n ------------------ Method Of LinkedList   (  1. add(\"One\");  ) -----------------------------------\n");
 		l.add("One");
 		l.add("Two");

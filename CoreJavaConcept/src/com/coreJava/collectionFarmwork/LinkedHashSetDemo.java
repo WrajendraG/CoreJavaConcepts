@@ -42,3 +42,17 @@ public class LinkedHashSetDemo
 	}
 
 }
+
+/*
+[123, 234, 345, null]
+
+Actual way of printing array:
+123
+234
+345
+null
+Size : 4
+Contains : false
+Remove :true
+[123, 345, null]
+[]*/
