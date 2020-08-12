@@ -20,6 +20,12 @@ interface I
 	}
 	
 	C objc= new C();
+	
+	default void m4()   // 1.7 onward we have to define method in interface but only default method used.
+	{
+		System.out.print("\n I am from interface default method ");
+	}
+	
 }
 
 class  A implements I
@@ -32,13 +38,18 @@ class  A implements I
         {
             void m2()
             {
-                System.out.print("\n I am Local class In Method ");
+                System.out.println("\n I am Local class In Method ");
             }
            
         }
 
         B obj1 = new B();// Object Should be create here
         obj1.m2();
+    }
+   @Override 
+   public void m4()
+    {
+    	System.out.println("I am from m4 in A class");
     }
 
 	@Override
@@ -55,6 +66,7 @@ public class LocalInnerclass
     {
             A obj2 = new A();
             obj2.m1();
+            obj2.m4();  //always base method called if that not there then the parent class/ innterface method called
             obj2.objc.m();   // we can create class in interface and we have to create object of that class within that interface for available in inheritance  .
             
     }

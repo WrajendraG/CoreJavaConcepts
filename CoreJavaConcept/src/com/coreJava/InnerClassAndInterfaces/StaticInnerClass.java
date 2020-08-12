@@ -13,7 +13,7 @@ class Outer
         System.out.print("I am Outer ");
     }
 
-    static class Inner    // we can't create static outer class
+    static class Inner    // we can't create static outer class inner class purpose always only help to outer class
     {
         void m2()
         {

@@ -9,9 +9,7 @@ public class ThreadJoinExample
         Thread t2 = new Thread(new MyRunnable(), "t2");
         Thread t3 = new Thread(new MyRunnable(), "t3");
 
-        t1.start();
-
-                //start second thread after waiting for 2 seconds or if it's dead
+        t1.start(); // start second thread after waiting for 2 seconds or if it's dead
 
         try
         {

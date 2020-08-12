@@ -4,13 +4,15 @@ import java.lang.ThreadGroup;
 
 public class ThreadGroupDemo implements Runnable
 {
-    public void run()
+    @Override
+	public void run()
     {
-        System.out.println("----------------------------- Start -----------------------------------");
-        System.out.println(Thread.currentThread().getName());
-        System.out.println("-----------------------------  END -----------------------------------");
+       
+        System.out.println("--------> Start : "+Thread.currentThread().getName() +" <--------END");
+       
+       
     }
-    public static void main (String args[])
+    public static void main (String args[]) throws Exception
     {
         ThreadGroupDemo runnable = new ThreadGroupDemo();  // runnable Traget
 
@@ -21,9 +23,13 @@ public class ThreadGroupDemo implements Runnable
         t1.start();
         t1.setName("Rajendra");
         t1.setPriority(Thread.MIN_PRIORITY);
-
+       
+        t1.join();
+        
         Thread t2  =new Thread(tg1,runnable,"Thread Two");
         t2.start();
+       
+        t2.sleep(1000);
 
         Thread t3 = new Thread(tg1,runnable,"Thread Three");
         t3.setPriority(Thread.MAX_PRIORITY);
